@@ -1,4 +1,4 @@
-# 📡 AgroSmart v0.2
+# 📡 AgroSmart v0.2.2
 
 ![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)
 ![PlatformIO](https://img.shields.io/badge/Framework-PlatformIO-orange.svg)
