@@ -1,11 +1,11 @@
-# 📡 AgroSmart v0.2.2
+# 📡 AgroSmart v0.2.3
 
 ![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)
 ![PlatformIO](https://img.shields.io/badge/Framework-PlatformIO-orange.svg)
 ![C++](https://img.shields.io/badge/Language-C%2B%2B-blue.svg)
 ![Build](https://img.shields.io/badge/Status-Stable-brightgreen.svg)
 
-Sistema de adquisición, procesamiento y despliegue de telemetría en tiempo real para variables ambientales, basado en una arquitectura de procesamiento distribuido multinodo mediante enlace de comunicación dedicado.
+Este es AgroSmart, un sistema de adquisición, procesamiento y despliegue de telemetría en tiempo real para variables ambientales, basado en una arquitectura de procesamiento distribuido multinodo mediante enlace de comunicación dedicado.
 
 ---
 
@@ -25,7 +25,8 @@ El proyecto utiliza una topología distribuida para separar la captura de datos 
 
 | Componente / Periférico      | Pin del Módulo | Pin GPIO ESP32                    | Modo / Función                       |
 | :--------------------------- | :------------- | :-------------------------------- | :----------------------------------- |
-| **DHT22** (Temp / Humedad)   | DATA           | **GPIO 14**                       | Lectura Digital Monocanal            |
+| **DHT22 #1** (Temp / Humedad) | DATA           | **GPIO 14**                       | Lectura Digital Monocanal            |
+| **DHT22 #2** (Temp / Humedad) | DATA           | **GPIO 27**                       | Lectura Digital Monocanal            |
 | **LDR** (Sensor de Luz)      | AO (Análogo)   | **GPIO 34**                       | Entrada Analógica (ADC1)             |
 | **MQ-Gas** (Calidad de Aire) | AO (Análogo)   | **GPIO 35**                       | Entrada Analógica (ADC1)             |
 | **Enlace UART2 -> NodeMCU**  | TX / RX        | **GPIO 17 (TX2) / GPIO 16 (RX2)** | Enlace Serie Transmisión / Recepción |
@@ -46,10 +47,10 @@ El proyecto utiliza una topología distribuida para separar la captura de datos 
 
 ---
 
-## 🛠️ Stack de Desarrollo y Herramientas
+## 🛠️ Stack de Desarrollo y Tecnologías
 
-- **Entorno de Desarrollo:** VSCodium con **PlatformIO Core**
-- **Lenguaje:** C++ (Arduino Framework / ESP-IDF primitives)
+- **Ecosistema de Compilación:** **PlatformIO Core**
+- **Lenguaje y Framework:** C++ (Arduino Framework)
 - **Control de Versiones:** Git / GitHub
 - **Licenciamiento:** GNU General Public License v3.0
 
@@ -59,5 +60,5 @@ El proyecto utiliza una topología distribuida para separar la captura de datos 
 
 1. Clonar el repositorio:
    ```bash
-   git clone [https://github.com/TU_USUARIO/Invernadero_Telemetria.git](https://github.com/TU_USUARIO/Invernadero_Telemetria.git)
-   ```
+   git clone [https://github.com/JCVM-GK/AgroSmart.git](https://github.com/JCVM-GK/AgroSmart.git)
+   cd AgroSmart
