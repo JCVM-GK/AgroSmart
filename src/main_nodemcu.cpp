@@ -193,7 +193,6 @@ void recibirDatosUART() {
 }
 
 void parsearTramaUART(char *trama) {
-  // Esperamos 6 tokens separados por comas: Temp1,Hum1,Temp2,Hum2,GasRaw,Luz
   char *token = strtok(trama, ",");
   if (token == NULL) return;
   float t1 = atof(token);
@@ -218,7 +217,7 @@ void parsearTramaUART(char *trama) {
   if (token == NULL) return;
   int luzVal = atoi(token);
 
-  // --- Si llegó hasta aquí, los 6 datos son válidos ---
+  // Asignación si la trama es correcta
   tempAire1 = t1;
   humAire1  = h1;
   tempAire2 = t2;
@@ -226,7 +225,7 @@ void parsearTramaUART(char *trama) {
   valGasRaw = gasRaw;
   hayLuz    = (luzVal == 1);
 
-  // Porcentaje Gas (Mapeado contra el cero calibrado en EEPROM)
+  // Mapeo Porcentaje Gas (tomando en cuenta el Cero de calibración)
   int offsetGas = valGasRaw - rawGasCero;
   if (offsetGas < 0) offsetGas = 0;
   int divGas = 4095 - rawGasCero;
